@@ -1,10 +1,5 @@
 package io.appx.codelabs.jpa.repository.entity;
 
-import java.time.LocalDateTime;
-
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -47,9 +42,6 @@ public class StudentEntity {
 
     @Column(name = "email_address", unique = true)
     private String email;
-
-    @Column(name = "graduation", nullable = false)
-    private String graduation;
 
     @Column(name = "date_of_birth", nullable = false)
     private String dateOfBirth;
