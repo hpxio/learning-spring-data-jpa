@@ -1,0 +1,9 @@
+services:
+  mysqldb:
+    container_name: jpa_mysql_1
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: userdb
+    ports:
+      - "3306:3306"
