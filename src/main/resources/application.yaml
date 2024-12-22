@@ -19,7 +19,7 @@ spring:
     name: Learning-Spring-Data-JPA-Service
 
   jpa:
-    show-sql: true
+    show-sql: false
     generate-ddl: true
     database: mysql
     hibernate:

@@ -8,7 +8,7 @@ import io.appx.codelabs.jpa.repository.entity.StudentEntity;
 import io.appx.codelabs.jpa.util.RollNoGenerator;
 
 @Component
-public class StudentRequestBuilder implements RequestBuilder<StudentRequest, StudentEntity> {
+public class StudentCreateRequesttBuilder implements RequestBuilder<StudentRequest, StudentEntity> {
 
     private static final float DISTINCTION_CUTOFF = 150.0f;
 

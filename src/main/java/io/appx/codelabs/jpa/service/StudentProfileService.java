@@ -5,4 +5,6 @@ import io.appx.codelabs.jpa.model.response.StudentResponse;
 
 public interface StudentProfileService {
     StudentResponse createStudent(StudentRequest request);
+
+    StudentResponse updateStudent(String rollNo, StudentRequest request);
 }

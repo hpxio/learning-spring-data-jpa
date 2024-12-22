@@ -41,15 +41,15 @@ public interface StudentRepository extends JpaRepository<StudentEntity, Integer>
     // find-student with email-address containing
     List<StudentEntity> findByEmailContaining(String term);
 
-    /* // find student with qualifying hsc-gpa (input from prop in service)
-    @Query(value = "SELECT s FROM StudentEntity s WHERE s.qualification.hscGPA >= 3.5")
+    // find student with qualifying gpa (input from prop in service)
+    @Query(value = "SELECT s FROM StudentEntity s WHERE s.qualification.gpa >= 3.5")
     List<StudentEntity> findStudentWithQualifyingHscGpa();
 
-    // find student with qualifying ssc-gpa (input from prop in service)
-    @Query(value = "SELECT s FROM StudentEntity s WHERE s.qualification.sscGPA >= 3.5")
-    List<StudentEntity> findStudentWithQualifyingSscGpa();
+    // find student with qualifying hsc-gpa (input from request)
+    @Query(value = "SELECT s FROM StudentEntity s WHERE s.qualification.gpa >= ?1")
+    List<StudentEntity> findStudentWithGPA(float gpa);
 
     // find student with qualifying maths+science scores
-    @Query(value = "SELECT * FROM student_tb0 s WHERE (s.ssc_maths + s.ssc_science) > 140", nativeQuery = true)
-    List<StudentEntity> findStudentWithQualifyingMathsAndScienceScore(); */
+    @Query(value = "SELECT * FROM student_tb0 s WHERE (s.ssc_maths + s.ssc_science) > 120", nativeQuery = true)
+    List<StudentEntity> findStudentWithQualifyingMathsAndScienceScore();
 }
